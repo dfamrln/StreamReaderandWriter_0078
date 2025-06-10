@@ -9,4 +9,5 @@ int main()
         throw 5; // melemparkan sebuah integer maka
         cout << "Pernyataan tidak akan dieksekusi" << endl;
     }
+    catch (int a)
 }
