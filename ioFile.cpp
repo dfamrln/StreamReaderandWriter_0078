@@ -23,3 +23,12 @@ int main() {
         // menulis dan memasukkan nilai dari 'baris' ke dalam file
         outfile << baris << endl;
     }
+// selesai dalam menulis maka sekarang tutup filenya
+    outfile.close();
+
+    // membuka file dalam mode membaca
+    ifstream infile;
+    // menunjuk ke sebuah nama file
+    infile.open("data.txt");
+
+    cout << endl << "> = Membuka dan membaca file " << endl;
