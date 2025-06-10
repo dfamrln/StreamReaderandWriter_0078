@@ -10,3 +10,12 @@ int main()
     cout << "Awal Program" << endl; // penanda 1:...
     
     try
+    {
+        //array<int, 3> data = {10, 20, 25};
+        int data[3] = {10, 20, 25};
+        //pesan array integer 3 elemen
+        //cout << data.at(5) << endl;
+        cout << data[2] << endl;
+        //memanggil array elemen ke 5
+
+    }
