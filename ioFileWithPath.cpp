@@ -1,56 +1,51 @@
-#include <fstream>
 #include <iostream>
+#include <fstream>
 #include <string>
 using namespace std;
 
-int main(){
+int main()
+{
     string baris;
     string NamaFile;
 
-    cout << "Masukkan Nama File : ";
+    cout << "Masukan Nama File :";
     cin >> NamaFile;
 
-    //membuka file dalam mode menulis.
+    //mmembuka file dalam mode menulis.
     ofstream outfile;
     //menunjuk ke sebuah nama file
     outfile.open(NamaFile + ".txt", ios::out);
-
-    cout << ">= Menulis file, \'q\' untuk keluar" << endl;
-    
+    cout <<  ">= Menulis file, \'q\' untuk keluar" << endl;
     //unlimited loop untuk menulis
-    while (true) {
-        cout << "- ";
-        //mendapatkan etiap karakter dalam satu baris
+    while(true){
+        cout << "-";
+        //mendapatkan setiap karakter dalam satu baris
         getline(cin, baris);
-        //loop akan berhneti jika anda memasukkan karakter q
+        //loop akan berhenti jika anda memasukan karakter 'q'
         if (baris == "q") break;
-        //menulis dan memasukkan nilai dari 'baris' kedalam file
+        //menulis dan memasukan nilai dari 'baris' ke dalam file
         outfile << baris << endl;
     }
-    //selesai dalam menulis sekarang tutp filenya
+    //selesai dalam menulis sekarang tutup filenya
     outfile.close();
-
     //membuka file dalam mode membaca
     ifstream infile;
-
-    //menunjuk kesebuah file
-    infile.open(NamaFile + ".txt", ios::in);
-
-    cout << endl << ">= membuka dan membaca file " << endl;
+    //menunjuk ke sebuah file
+    infile.open(NamaFile, ios::in);
+    cout << endl << ">= Membuka dan membaca file" << endl;
     //jika file ada maka
     if (infile.is_open())
     {
-        //melakukkan perulangan setiap baris
-        while (getline(infile, baris))
+        //melakukan perulangan setiap baris
+        while(getline(infile, baris))
         {
-            //dan tampilkan di sini
-            cout << baris << '\n';
+            //dan tampilankan disini
+            cout << baris << "\n";
         }
         //tutup file tersebut setelah selesai
         infile.close();
     }
-
-    //jik tidak ditemukan file maka akan menampilkan ini
-    else cout << "unable to opne file";
+    //jika tidak ditemukan file maka akan menampilkan ini
+    else cout << "Unable to open file";
     return 0;
 }
