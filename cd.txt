@@ -1,0 +1,2 @@
+ "c:\PemogramanDasar\StreamReaderandWriter_0078\" ; if ($?) { g++ ioFile.cpp -o ioFile } ; if ($?) { .\ioFile }
+cd "c:\PemogramanDasar\StreamReaderandWriter_0078\" ; if ($?) { g++ exeptionStandart.cpp -o exeptionStandart } ; if ($?) { .\exeptionStandart }
